@@ -18,6 +18,8 @@ public class Constants {
 	public static String BAO_MI_STR_SRC = "CHENGFEI.CAC.132";
 	public static String BAO_MI_STR_ENC = "a83d78f9ef0b81d845509797a63f7644da192abd308b3db7";
 	
+	public static final String SECRET_KEY = "d58c8eaf-8c1c-4b16-9719-b512053e16d5";
+	
 	private static Properties prop;
 
 	public static String getDbParam(String paramName)  {

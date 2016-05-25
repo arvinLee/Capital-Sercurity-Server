@@ -44,5 +44,30 @@ public interface CHSSercurityService {
 	 * @param userName 职工编号
 	 * @return
 	 */
-	public String getAllAccount(@WebParam(name = "userName")String userName);
+	public String getAccount(@WebParam(name = "userName")String userName);
+	
+	/**
+	 * 账号的启用与禁用
+	 * @param isLock 
+	 * @param userName
+	 * @return
+	 */
+	public String changeUserLockStatus(@WebParam(name = "userName")String userName,@WebParam(name = "isLock")String isLock);
+	
+	/**
+	 * 修改用户信息，只支持可见最高密级的修改
+	 * @param userName
+	 * @param secretLevel
+	 * @return
+	 */
+	public String editUser(@WebParam(name = "userName")String userName,@WebParam(name = "secretLevel")String secretLevel);
+	
+	/**
+	 * 获取用户数量
+	 * countType	0 获取所有有效用户数量|1 获取启用的用户数量 |2 获取禁用的用户数量
+	 * @param countType
+	 * @return
+	 */
+	public String getUserCount(@WebParam(name = "countType")int countType);
+	
 }
